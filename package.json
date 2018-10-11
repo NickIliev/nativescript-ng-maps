@@ -7,6 +7,9 @@
     "id": "org.nativescript.ngmaps",
     "tns-android": {
       "version": "5.0.0-2018-10-09-135927-01"
+    },
+    "tns-ios": {
+      "version": "5.0.0-rc-2018-10-11-110051-01"
     }
   },
   "dependencies": {
