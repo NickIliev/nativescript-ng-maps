@@ -25,8 +25,8 @@ export class ItemsComponent  {
         this.mapView = event.object;
         var marker = new Marker();
         marker.position = Position.positionFromLatLng(25.379843, 51.531874);
-        marker.title = "Doha";
-        marker.snippet = "Qatar";
+        marker.title = "Ritz-Carlton";
+        marker.snippet = "Doha";
         marker.userData = {index: 1};
         this.mapView.addMarker(marker);
     }
