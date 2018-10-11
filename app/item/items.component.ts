@@ -11,31 +11,22 @@ registerElement('MapView', () => MapView);
     templateUrl: "./items.component.html",
 })
 export class ItemsComponent  {
-    latitude =  -33.86;
-    longitude = 151.20;
+    latitude = 25.379843;
+    longitude = 51.531874;
     zoom = 8;
     bearing = 0;
     tilt = 0;
     padding = [40, 40, 40, 40];
     mapView: MapView;
-
     lastCamera: String;
-
-    constructor() {
-    }
 
     //Map events
     onMapReady(event) {
-        console.log('Map Ready');
-
         this.mapView = event.object;
-
-        console.log("Setting a marker...");
-
         var marker = new Marker();
-        marker.position = Position.positionFromLatLng(-33.86, 151.20);
-        marker.title = "Sydney";
-        marker.snippet = "Australia";
+        marker.position = Position.positionFromLatLng(25.379843, 51.531874);
+        marker.title = "Doha";
+        marker.snippet = "Qatar";
         marker.userData = {index: 1};
         this.mapView.addMarker(marker);
     }

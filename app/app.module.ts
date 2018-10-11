@@ -2,18 +2,12 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
-
 import { ItemsComponent } from "./item/items.component";
+import { isIOS } from "platform";
 
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from "nativescript-angular/forms";
+declare let GMSServices: any;
 
-// Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
-// import { NativeScriptHttpModule } from "nativescript-angular/http";
-import * as platform from "platform";
-declare var GMSServices: any;
-
-if (platform.isIOS) { 
+if (isIOS) { 
   GMSServices.provideAPIKey("AIzaSyDK5FnylCgO8s8L6usEMS7CFbVZfqspyXs");
 }
 
